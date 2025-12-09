@@ -1,0 +1,16 @@
+[pak]
+name = "infrastructure-software-upgrades"
+version = "1.0.0"
+description = "Generic guidelines on how to perform infrastructure component upgrades in a reliable way"
+authors = ["Stakpak <team@stakpak.dev>"]
+license = "MIT"
+repository = "https://github.com/stakpak/paks"
+path = "infrastructure-software-upgrades"
+keywords = ["upgrades", "maintenance", "devops", "operations"]
+visibility = "public"
+
+[contents]
+[[contents.rulebooks]]
+path = "rulebooks/infrastructure-software-upgrades.md"
+description = "Generic guidelines on how to perform infrastructure component upgrades in a reliable way"
+tags = ["upgrades", "maintenance", "devops", "operations"]

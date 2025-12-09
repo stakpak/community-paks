@@ -1,0 +1,22 @@
+[pak]
+name = "aws-architecture-design"
+version = "1.0.0"
+description = """Purpose: Standardize how stakpak designs and optimizes AWS architectures.
+Scope:
+Greenfield: design new infrastructure.
+Brownfield: analyze existing architectures and propose improvements."""
+authors = ["Stakpak <team@stakpak.dev>"]
+license = "MIT"
+repository = "https://github.com/stakpak/paks"
+path = "aws-architecture-design"
+keywords = ["aws", "architecture", "design aws architecture", "optimize aws architecture"]
+visibility = "public"
+
+[contents]
+[[contents.rulebooks]]
+path = "rulebooks/aws-architecture-design.md"
+description = """Purpose: Standardize how stakpak designs and optimizes AWS architectures.
+Scope:
+Greenfield: design new infrastructure.
+Brownfield: analyze existing architectures and propose improvements."""
+tags = ["aws", "architecture", "design aws architecture", "optimize aws architecture"]

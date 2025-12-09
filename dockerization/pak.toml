@@ -1,0 +1,16 @@
+[pak]
+name = "dockerization"
+version = "1.0.0"
+description = """Official Stakpak application containerization standard operating procedure, a step-by-step guidline to properly dockerize applications. This is a rule book curated by the Stakpak Team."""
+authors = ["Stakpak <team@stakpak.dev>"]
+license = "MIT"
+repository = "https://github.com/stakpak/paks"
+path = "dockerization"
+keywords = ["dockerization", "containerization", "docker", "compose", "cloud-native", "container"]
+visibility = "public"
+
+[contents]
+[[contents.rulebooks]]
+path = "rulebooks/dockerization.md"
+description = """Official Stakpak application containerization standard operating procedure, a step-by-step guidline to properly dockerize applications. This is a rule book curated by the Stakpak Team."""
+tags = ["dockerization", "containerization", "docker", "compose", "cloud-native", "container"]
