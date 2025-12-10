@@ -1,0 +1,16 @@
+[pak]
+name = "website-uptime-monitoring"
+version = "1.0.1"
+description = "Deploy Uptime Kuma for website uptime monitoring and alerting. Covers Docker and Kubernetes deployments."
+authors = ["Stakpak <team@stakpak.dev>"]
+license = "MIT"
+repository = "https://github.com/stakpak/paks"
+path = "website-uptime-monitoring"
+keywords = ["monitoring", "uptime", "alerting", "availability", "uptime-kuma", "kubernetes", "docker"]
+visibility = "public"
+
+[contents]
+[[contents.rulebooks]]
+path = "rulebooks/website-uptime-monitoring.md"
+description = "Deploy Uptime Kuma for website uptime monitoring and alerting. Covers Docker and Kubernetes deployments."
+tags = ["monitoring", "uptime", "alerting", "availability", "uptime-kuma", "kubernetes", "docker"]
