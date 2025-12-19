@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "infrastructure-cost-estimation"
-keywords = ["cost", "cloud", "pricing", "cost optimization", "analysis", "aws", "gcp", "azure", "cloud spend", "finops"]
+tags = ["cost", "cloud", "pricing", "cost optimization", "analysis", "aws", "gcp", "azure", "cloud spend", "finops"]
 visibility = "public"
 
 [contents]

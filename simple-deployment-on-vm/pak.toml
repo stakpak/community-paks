@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "simple-deployment-on-vm"
-keywords = ["aws", "deploy", "security", "dns", "ec2", "tls configuration"]
+tags = ["aws", "deploy", "security", "dns", "ec2", "tls configuration"]
 visibility = "public"
 
 [contents]

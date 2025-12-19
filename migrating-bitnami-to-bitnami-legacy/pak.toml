@@ -8,7 +8,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "migrating-bitnami-to-bitnami-legacy"
-keywords = ["Bitnami", "Bitnami Lecagy", "Bitnami Helm Charts"]
+tags = ["Bitnami", "Bitnami Legacy", "Bitnami Helm Charts"]
 visibility = "public"
 
 [contents]
@@ -17,4 +17,4 @@ path = "rulebooks/migrating-bitnami-to-bitnami-legacy.md"
 description = """This rule book helps you migrate Bitnami Helm charts and container images from the bitnami repository to the bitnamilegacy repository.
 
 This migration is necessary due to Bitnami's transition, effective August 28th, 2025, where existing images will be moved to the legacy repo"""
-tags = ["Bitnami", "Bitnami Lecagy", "Bitnami Helm Charts"]
+tags = ["Bitnami", "Bitnami Legacy", "Bitnami Helm Charts"]

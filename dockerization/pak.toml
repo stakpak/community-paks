@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "dockerization"
-keywords = ["dockerization", "containerization", "docker", "compose", "cloud-native", "container"]
+tags = ["dockerization", "containerization", "docker", "compose", "cloud-native", "container"]
 visibility = "public"
 
 [contents]

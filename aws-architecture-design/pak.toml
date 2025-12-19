@@ -9,7 +9,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "aws-architecture-design"
-keywords = ["aws", "architecture", "design aws architecture", "optimize aws architecture"]
+tags = ["aws", "architecture", "design aws architecture", "optimize aws architecture"]
 visibility = "public"
 
 [contents]
