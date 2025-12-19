@@ -47,7 +47,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "pak-name"
-keywords = ["keyword1", "keyword2"]
+tags = ["keyword1", "keyword2"]
 visibility = "public"
 
 [contents]
@@ -75,6 +75,114 @@ stakpak rulebook use aws-architecture-design
 ### Direct Access
 
 You can also browse and reference the rulebooks directly from this repository. Each rulebook is a standalone Markdown document that can be read and followed independently.
+
+## MCP Integration
+
+Stakpak paks are available via Model Context Protocol (MCP), allowing any compatible AI client to access rulebooks directly.
+
+> **Note:** If you're using [Stakpak Agent](https://stakpak.dev), paks are already built-in and available by default — no additional configuration needed.
+
+**Endpoint:** `https://apiv2.stakpak.dev/v1/paks/mcp`
+
+### Claude
+
+#### Pro, Max, Team & Enterprise (Claude.ai and Claude Desktop)
+
+1. Go to **Settings → Connectors → Add custom connector**
+2. Enter:
+   - **Integration name:** `Stakpak Paks`
+   - **Integration URL:** `https://apiv2.stakpak.dev/v1/paks/mcp`
+3. Click **Add**, then **Connect** to authorize
+
+#### Claude Code CLI
+
+```bash
+claude mcp add --transport http stakpak-paks https://apiv2.stakpak.dev/v1/paks/mcp
+```
+
+### Cursor
+
+1. Press **⌘/Ctrl Shift J**
+2. Go to **MCP & Integrations → New MCP server**
+3. Add this configuration:
+
+```json
+{
+  "mcpServers": {
+    "stakpak-paks": {
+      "url": "https://apiv2.stakpak.dev/v1/paks/mcp"
+    }
+  }
+}
+```
+
+### Visual Studio Code
+
+Add to your VS Code `settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "stakpak-paks": {
+      "url": "https://apiv2.stakpak.dev/v1/paks/mcp",
+      "type": "http"
+    }
+  }
+}
+```
+
+Or use the UI:
+1. Press **⌘/Ctrl Shift P** → search **MCP: Add Server**
+2. Select **HTTP (HTTP or Server-Sent Events)**
+3. Enter: `https://apiv2.stakpak.dev/v1/paks/mcp`
+4. Name the server **Stakpak Paks**
+
+### Windsurf
+
+1. Press **⌘/Ctrl ,** to open settings
+2. Navigate **Cascade → MCP servers → View raw config**
+3. Add:
+
+```json
+{
+  "mcpServers": {
+    "stakpak-paks": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://apiv2.stakpak.dev/v1/paks/mcp"]
+    }
+  }
+}
+```
+
+### Zed
+
+1. Press **⌘/Ctrl ,** to open settings
+2. Add:
+
+```json
+{
+  "context_servers": {
+    "stakpak-paks": {
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://apiv2.stakpak.dev/v1/paks/mcp"]
+    }
+  }
+}
+```
+
+### Other MCP Clients
+
+For clients that support remote MCP via stdio:
+
+```json
+{
+  "stakpak-paks": {
+    "command": "npx",
+    "args": ["-y", "mcp-remote", "https://apiv2.stakpak.dev/v1/paks/mcp"]
+  }
+}
+```
 
 ## Topics Covered
 

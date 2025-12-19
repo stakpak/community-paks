@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "aws-sso-auth-guide"
-keywords = ["aws", "sso", "authentication", "iam-identity-center"]
+tags = ["aws", "sso", "authentication", "iam-identity-center"]
 visibility = "public"
 
 [contents]

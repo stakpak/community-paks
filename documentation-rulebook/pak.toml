@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "documentation-rulebook"
-keywords = ["deployment", "production", "sop"]
+tags = ["deployment", "production", "sop"]
 visibility = "public"
 
 [contents]

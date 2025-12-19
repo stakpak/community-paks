@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "how-to-write-rulebooks"
-keywords = ["rulebook-creation", "knowledge-management", "devops-automation", "best-practice", "stakpak-cli"]
+tags = ["rulebook-creation", "knowledge-management", "devops-automation", "best-practice", "stakpak-cli"]
 visibility = "public"
 
 [contents]

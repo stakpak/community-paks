@@ -6,7 +6,7 @@ authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
 repository = "https://github.com/stakpak/paks"
 path = "confighub-usage-guide"
-keywords = ["confighub", "kubernetes", "configuration-management", "gitops-alternative", "config-as-data", "multi-environment"]
+tags = ["confighub", "kubernetes", "configuration-management", "gitops-alternative", "config-as-data", "multi-environment"]
 visibility = "public"
 
 [contents]
