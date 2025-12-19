@@ -1,6 +1,6 @@
 [pak]
 name = "infrastructure-cost-estimation"
-version = "1.0.0"
+version = "1.0.1"
 description = """Help you discover how much you spend on AWS/GCP/Azure. This rulebook guides practitioners through proper cloud cost calculations, systematic resource discovery (via IaC analysis and live environment enumeration), authoritative pricing research and analysis/estimation."""
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

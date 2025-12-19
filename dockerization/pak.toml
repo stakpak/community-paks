@@ -1,6 +1,6 @@
 [pak]
 name = "dockerization"
-version = "1.0.0"
+version = "1.0.1"
 description = """Official Stakpak application containerization standard operating procedure, a step-by-step guidline to properly dockerize applications. This is a rule book curated by the Stakpak Team."""
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

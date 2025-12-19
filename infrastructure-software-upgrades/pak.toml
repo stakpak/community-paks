@@ -1,6 +1,6 @@
 [pak]
 name = "infrastructure-software-upgrades"
-version = "1.0.0"
+version = "1.0.1"
 description = "Generic guidelines on how to perform infrastructure component upgrades in a reliable way"
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

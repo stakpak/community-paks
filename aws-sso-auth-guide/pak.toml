@@ -1,6 +1,6 @@
 [pak]
 name = "aws-sso-auth-guide"
-version = "1.0.0"
+version = "1.0.1"
 description = "AWS SSO discovery, configuration, and terminal usage"
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

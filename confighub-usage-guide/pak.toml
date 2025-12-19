@@ -1,6 +1,6 @@
 [pak]
 name = "confighub-usage-guide"
-version = "1.0.0"
+version = "1.0.1"
 description = """A comprehensive guide for using ConfigHub to manage Kubernetes configuration across multiple environments using Configuration as Data principles. This rulebook covers installation, configuration management, variant handling, and operational workflows."""
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

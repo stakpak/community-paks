@@ -1,6 +1,6 @@
 [pak]
 name = "documentation-rulebook"
-version = "1.0.0"
+version = "1.0.1"
 description = "Standard deployment procedures for production"
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

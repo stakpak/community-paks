@@ -1,6 +1,6 @@
 [pak]
 name = "aws-architecture-design"
-version = "1.0.0"
+version = "1.0.1"
 description = """Purpose: Standardize how stakpak designs and optimizes AWS architectures.
 Scope:
 Greenfield: design new infrastructure.

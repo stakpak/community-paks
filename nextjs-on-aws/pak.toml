@@ -1,6 +1,6 @@
 [pak]
 name = "nextjs-on-aws"
-version = "1.0.0"
+version = "1.0.1"
 description = "This document compares various AWS deployment options for Next.js applications, analyzing costs, benefits, limitations, and providing recommendations based on different use cases."
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"

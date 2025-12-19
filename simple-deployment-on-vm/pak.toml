@@ -1,6 +1,6 @@
 [pak]
 name = "simple-deployment-on-vm"
-version = "1.0.0"
+version = "1.0.1"
 description = "How to do simple but secure deployments using virtual machines on different cloud providers"
 authors = ["Stakpak <team@stakpak.dev>"]
 license = "MIT"
