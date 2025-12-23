@@ -5,6 +5,11 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - upgrades
+    - maintenance
+    - devops
+    - operations
 ---
 
 When upgrading infrastructure components like Kubernetes Cluster, Jenkins, Kubernetes Operators, Databases, always consider the following:

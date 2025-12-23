@@ -5,6 +5,13 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - aws
+    - deploy
+    - security
+    - dns
+    - ec2
+    - tls configuration
 ---
 
 # Deploying  applications with a simple but secure setup

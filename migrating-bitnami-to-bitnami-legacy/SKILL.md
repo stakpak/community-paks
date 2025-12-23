@@ -8,6 +8,10 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - bitnami
+    - bitnami-legacy
+    - bitnami-helm-charts
 ---
 
 # Bitnami to Bitnami Legacy Migration Rule Book

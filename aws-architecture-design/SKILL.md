@@ -9,6 +9,11 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - aws
+    - architecture
+    - design aws architecture
+    - optimize aws architecture
 ---
 
 # Designing & Optimizing AWS Architectures Rule Book

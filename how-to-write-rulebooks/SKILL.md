@@ -6,6 +6,12 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - rulebook-creation
+    - knowledge-management
+    - devops-automation
+    - best-practice
+    - stakpak-cli
 ---
 
 ## Goals

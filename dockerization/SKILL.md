@@ -6,6 +6,13 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - dockerization
+    - containerization
+    - docker
+    - compose
+    - cloud-native
+    - container
 ---
 
 # Application Dockerization RuleBook

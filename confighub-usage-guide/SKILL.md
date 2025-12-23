@@ -6,6 +6,13 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - confighub
+    - kubernetes
+    - configuration-management
+    - gitops-alternative
+    - config-as-data
+    - multi-environment
 ---
 
 # ConfigHub Usage Guide

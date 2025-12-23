@@ -6,6 +6,13 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - nextjs
+    - aws
+    - deployment
+    - cost-analysis
+    - migration
+    - architecture
 ---
 
 # Next.js AWS Deployment Options Comparison

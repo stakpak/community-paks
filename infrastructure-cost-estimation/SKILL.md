@@ -6,6 +6,17 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - cost
+    - cloud
+    - pricing
+    - cost optimization
+    - analysis
+    - aws
+    - gcp
+    - azure
+    - cloud spend
+    - finops
 ---
 
 # Infrastructure Cost Estimation Methodology

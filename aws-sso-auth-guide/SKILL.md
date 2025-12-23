@@ -5,6 +5,11 @@ license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
   version: "1.0.0"
+  tags:
+    - aws
+    - sso
+    - authentication
+    - iam-identity-center
 ---
 
 # AWS SSO Terminal Guide
