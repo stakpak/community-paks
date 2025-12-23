@@ -6,14 +6,14 @@ description: |
   Greenfield: design new infrastructure.
   Brownfield: analyze existing architectures and propose improvements.
 license: MIT
+tags:
+  - aws
+  - architecture
+  - design aws architecture
+  - optimize aws architecture
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - aws
-    - architecture
-    - design aws architecture
-    - optimize aws architecture
+  version: "1.0.2"
 ---
 
 # Designing & Optimizing AWS Architectures Rule Book

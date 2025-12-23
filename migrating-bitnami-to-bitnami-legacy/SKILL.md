@@ -5,13 +5,13 @@ description: |
 
   This migration is necessary due to Bitnami's transition, effective August 28th, 2025, where existing images will be moved to the legacy repo
 license: MIT
+tags:
+  - bitnami
+  - bitnami-legacy
+  - bitnami-helm-charts
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - bitnami
-    - bitnami-legacy
-    - bitnami-helm-charts
+  version: "1.0.2"
 ---
 
 # Bitnami to Bitnami Legacy Migration Rule Book

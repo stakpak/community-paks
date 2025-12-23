@@ -2,14 +2,14 @@
 name: aws-sso-auth-guide
 description: AWS SSO discovery, configuration, and terminal usage
 license: MIT
+tags:
+  - aws
+  - sso
+  - authentication
+  - iam-identity-center
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - aws
-    - sso
-    - authentication
-    - iam-identity-center
+  version: "1.0.2"
 ---
 
 # AWS SSO Terminal Guide

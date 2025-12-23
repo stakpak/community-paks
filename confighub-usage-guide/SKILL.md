@@ -3,16 +3,16 @@ name: confighub-usage-guide
 description: |
   A comprehensive guide for using ConfigHub to manage Kubernetes configuration across multiple environments using Configuration as Data principles. This rulebook covers installation, configuration management, variant handling, and operational workflows.
 license: MIT
+tags:
+  - confighub
+  - kubernetes
+  - configuration-management
+  - gitops-alternative
+  - config-as-data
+  - multi-environment
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - confighub
-    - kubernetes
-    - configuration-management
-    - gitops-alternative
-    - config-as-data
-    - multi-environment
+  version: "1.0.2"
 ---
 
 # ConfigHub Usage Guide

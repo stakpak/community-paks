@@ -2,14 +2,14 @@
 name: infrastructure-software-upgrades
 description: Generic guidelines on how to perform infrastructure component upgrades in a reliable way
 license: MIT
+tags:
+  - upgrades
+  - maintenance
+  - devops
+  - operations
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - upgrades
-    - maintenance
-    - devops
-    - operations
+  version: "1.0.2"
 ---
 
 When upgrading infrastructure components like Kubernetes Cluster, Jenkins, Kubernetes Operators, Databases, always consider the following:

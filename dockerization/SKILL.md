@@ -3,16 +3,16 @@ name: dockerization
 description: |
   Official Stakpak application containerization standard operating procedure, a step-by-step guidline to properly dockerize applications. This is a rule book curated by the Stakpak Team.
 license: MIT
+tags:
+  - dockerization
+  - containerization
+  - docker
+  - compose
+  - cloud-native
+  - container
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - dockerization
-    - containerization
-    - docker
-    - compose
-    - cloud-native
-    - container
+  version: "1.0.2"
 ---
 
 # Application Dockerization RuleBook

@@ -3,20 +3,20 @@ name: infrastructure-cost-estimation
 description: |
   Help you discover how much you spend on AWS/GCP/Azure. This rulebook guides practitioners through proper cloud cost calculations, systematic resource discovery (via IaC analysis and live environment enumeration), authoritative pricing research and analysis/estimation.
 license: MIT
+tags:
+  - cost
+  - cloud
+  - pricing
+  - cost optimization
+  - analysis
+  - aws
+  - gcp
+  - azure
+  - cloud spend
+  - finops
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.1"
-  tags:
-    - cost
-    - cloud
-    - pricing
-    - cost optimization
-    - analysis
-    - aws
-    - gcp
-    - azure
-    - cloud spend
-    - finops
+  version: "1.0.2"
 ---
 
 # Infrastructure Cost Estimation Methodology
