@@ -1,3 +1,16 @@
+---
+name: aws-architecture-design
+description: |
+  Purpose: Standardize how stakpak designs and optimizes AWS architectures.
+  Scope:
+  Greenfield: design new infrastructure.
+  Brownfield: analyze existing architectures and propose improvements.
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # Designing & Optimizing AWS Architectures Rule Book
 
 # Overview

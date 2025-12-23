@@ -1,3 +1,12 @@
+---
+name: infrastructure-software-upgrades
+description: Generic guidelines on how to perform infrastructure component upgrades in a reliable way
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 When upgrading infrastructure components like Kubernetes Cluster, Jenkins, Kubernetes Operators, Databases, always consider the following:
 
 1) Find the current version of the component you want to upgrade

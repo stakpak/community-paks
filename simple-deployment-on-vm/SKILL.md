@@ -1,3 +1,12 @@
+---
+name: simple-deployment-on-vm
+description: How to do simple but secure deployments using virtual machines on different cloud providers
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # Deploying  applications with a simple but secure setup
 
 ## Core Principles:

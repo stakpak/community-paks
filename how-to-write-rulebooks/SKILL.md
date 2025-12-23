@@ -1,3 +1,13 @@
+---
+name: how-to-write-rulebooks
+description: |
+  A practical, step-by-step guide that standardizes how to author, structure and publish rulebooks in Stakpak. It covers metadata creation, goal articulation, workflow design, reference inclusion and best-practice guidelines.
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 ## Goals
 
 * Make it easy for anyone to write and share Rulebooks

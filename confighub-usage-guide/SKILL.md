@@ -1,3 +1,13 @@
+---
+name: confighub-usage-guide
+description: |
+  A comprehensive guide for using ConfigHub to manage Kubernetes configuration across multiple environments using Configuration as Data principles. This rulebook covers installation, configuration management, variant handling, and operational workflows.
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # ConfigHub Usage Guide
 
 ## Goals
@@ -298,289 +308,62 @@ cub unit approve --space app-prod frontend --revision 5
 # Bulk approve ChangeSet
 cub unit approve --space app-prod \
   --filter home/prod-app-filter \
-  --revision ChangeSet:home/release-v123
+  --changeset home/release-v123
 ```
-
-**Reasoning:** Approval workflows prevent unauthorized changes to production. They create audit trails for compliance.
 
 ### Step 13: Apply Configuration
 
-Apply changes to live resources:
+Apply changes to clusters:
 
 ```bash
 # Apply single unit
-cub unit apply --space app-prod frontend
+cub unit apply --space app-dev frontend
 
-# Bulk apply with ChangeSet
-cub unit apply --space app-prod \
-  --filter home/prod-app-filter \
-  --revision ChangeSet:home/release-v123
+# Apply all units in environment
+cub unit apply --space "*" \
+  --where "Space.Labels.Environment = 'dev'"
 
-# Dry run to preview changes
+# Apply with dry-run first
 cub unit apply --space app-prod frontend --dry-run
 ```
 
-**Reasoning:** Apply operations are executed by workers in your infrastructure. Links ensure correct ordering. Dry runs enable safe previews.
+### Step 14: Monitor and Refresh State
 
-### Step 14: Manage Configuration Drift
-
-Detect and handle drift between ConfigHub and live state:
+Keep ConfigHub in sync with live state:
 
 ```bash
-# Refresh to pull live state into ConfigHub
-cub unit refresh --space app-prod frontend
+# Refresh single unit
+cub unit refresh --space app-dev frontend
 
-# Review differences (compare revisions in UI or CLI)
-cub revision list --space app-prod frontend
+# Bulk refresh
+cub unit refresh --space "*" \
+  --where "Space.Labels.Environment = 'dev'"
 
-# Option A: Keep live changes (do nothing)
-
-# Option B: Revert to previous revision
-cub unit update --patch --space app-prod frontend \
-  --restore "Before:RevisionNum:5"
-cub unit apply --space app-prod frontend
-
-# Option C: Merge live changes with pending changes
-cub unit update --patch --space app-prod frontend \
-  --merge-source Self \
-  --merge-base Before:RevisionNum:5 \
-  --merge-end RevisionNum:5
+# Check drift
+cub unit get --space app-dev frontend --jq '.Unit.DriftStatus'
 ```
 
-**Reasoning:** Refresh enables bidirectional sync, unlike GitOps. This accommodates emergency changes and provides transparency.
+### Step 15: Rollback When Needed
 
-### Step 15: Propagate Changes Across Variants
-
-Upgrade downstream variants from upstream:
+Revert to previous configurations:
 
 ```bash
-# Upgrade staging from dev
-cub unit update --space app-staging frontend --patch --upgrade
+# View revision history
+cub unit get --space app-dev frontend --jq '.Unit.Revisions'
 
-# Bulk upgrade all prod variants
-cub unit update --space "*" --patch --upgrade \
-  --where "UpstreamUnit.Slug = 'frontend' AND Space.Labels.Environment = 'prod'"
+# Rollback to specific revision
+cub unit rollback --space app-dev frontend --revision 3
 
-# Preview upgrade changes
-cub unit update --space app-staging frontend --patch --upgrade --dry-run
-```
-
-**Reasoning:** Upgrade merges upstream changes while preserving downstream overrides. This enables controlled promotion across environments.
-
-### Step 16: Rollback Changes
-
-Rollback using tags or ChangeSets:
-
-```bash
-# Tag current state before risky change
-cub tag create --space home pre-upgrade-20251030
-cub unit tag --space app-prod --revision HeadRevisionNum home/pre-upgrade-20251030
-
-# Rollback to tag
-cub unit update --patch --space app-prod \
+# Rollback entire ChangeSet
+cub unit rollback --space app-prod \
   --filter home/prod-app-filter \
-  --restore "Before:Tag:home/pre-upgrade-20251030"
-cub unit apply --space app-prod --filter home/prod-app-filter
-
-# Rollback ChangeSet
-cub unit update --patch --space app-prod \
-  --filter home/prod-app-filter \
-  --restore "Before:ChangeSet:home/release-v123"
-cub unit apply --space app-prod --filter home/prod-app-filter
+  --changeset home/release-v123
 ```
-
-**Reasoning:** Tags and ChangeSets provide rollback points. ConfigHub maintains full revision history for point-in-time recovery.
-
-### Step 17: Query and Analyze Configuration
-
-Use functions to extract information:
-
-```bash
-# Find all units using specific image
-cub unit list --space "*" \
-  --resource-type apps/v1/Deployment \
-  --where-data "spec.template.spec.containers.*.image#reference = ':v1.2.3'"
-
-# Get container images across environments
-cub function do --space "*" \
-  --where "Labels.Application = 'myapp'" \
-  --output-values-only \
-  get-image "*"
-
-# Find placeholders that need replacement
-cub function do --space app-dev frontend get-placeholders
-
-# Custom queries with yq
-cub function do --space app-dev frontend \
-  yq '.[] | select(.kind == "Deployment") | .spec.replicas'
-```
-
-**Reasoning:** Configuration as Data enables powerful queries. This supports compliance audits, security reviews, and bulk operations.
-
-### Step 18: Protect Critical Resources
-
-Add gates to prevent accidental deletion:
-
-```bash
-# Protect production units
-cub unit update --patch --space app-prod \
-  --delete-gate critical \
-  --destroy-gate critical \
-  database
-
-# Protect production space
-cub space update --patch --space app-prod \
-  --delete-gate production-environment
-
-# Remove gate when needed
-cub unit update --patch --space app-prod \
-  --delete-gate critical=- \
-  database
-```
-
-**Reasoning:** Gates prevent accidental destruction of critical infrastructure. They require explicit removal before deletion.
-
----
-
-## Common Patterns
-
-### Pattern 1: Progressive Rollout
-
-```bash
-# Deploy to dev
-cub function do --space app-dev set-image-reference main ":v2.0.0"
-cub unit apply --space app-dev
-
-# Promote to staging after validation
-cub unit update --space app-staging --patch --upgrade
-cub unit apply --space app-staging
-
-# Promote to prod regions sequentially
-cub unit update --space app-prod-us-east --patch --upgrade
-cub unit apply --space app-prod-us-east
-
-# Wait and monitor, then continue
-cub unit update --space app-prod-us-west --patch --upgrade
-cub unit apply --space app-prod-us-west
-```
-
-### Pattern 2: Emergency Hotfix
-
-```bash
-# Make direct change in prod
-kubectl set image deployment/frontend main=myapp:hotfix -n prod
-
-# Pull change into ConfigHub
-cub unit refresh --space app-prod frontend
-
-# Backport to other environments
-cub unit update --patch --space app-dev frontend \
-  --merge-source app-prod/frontend \
-  --merge-base Before:RevisionNum:10 \
-  --merge-end RevisionNum:10
-```
-
-### Pattern 3: Multi-Environment Configuration
-
-```bash
-# Create base unit with placeholders
-cub helm install myapp bitnami/nginx --space home
-
-# Clone to environments
-cub unit create --space app-dev --upstream-unit home/myapp
-cub unit create --space app-prod --upstream-unit home/myapp
-
-# Link to environment-specific dependencies
-cub link create --space app-dev - myapp dev-namespace
-cub link create --space app-prod - myapp prod-namespace
-
-# Apply environment-specific customizations
-cub function do --space app-dev myapp set-replicas 1
-cub function do --space app-prod myapp set-replicas 3
-```
-
----
-
-## Troubleshooting
-
-### Apply Gates Blocking Apply
-
-**Symptom:** `cub unit apply` fails with "Apply gate prevents apply"
-
-**Solution:**
-```bash
-# Check which gates are blocking
-cub unit get --space app-prod frontend
-
-# Re-run validation to see details
-cub function do --space app-prod frontend vet-placeholders
-
-# Fix issues (e.g., replace placeholders)
-cub function do --space app-prod frontend \
-  set-namespace production
-
-# Verify gates cleared
-cub unit get --space app-prod frontend
-```
-
-### Worker Not Connected
-
-**Symptom:** Worker shows `Disconnected` or `Unresponsive`
-
-**Solution:**
-```bash
-# Check worker status
-cub worker list --space "*"
-
-# Check worker pods in cluster
-kubectl get pods -n confighub-system
-
-# Check worker logs
-kubectl logs -n confighub-system deployment/cluster-worker
-
-# Recreate worker secret if needed
-cub worker install cluster-worker --space platform-dev \
-  --export-secret-only | kubectl apply -f -
-```
-
-### Configuration Validation Failures
-
-**Symptom:** `vet-schemas` trigger fails
-
-**Solution:**
-```bash
-# Validate locally to see detailed errors
-cub function local vet-schemas unit.yaml
-
-# Fix schema issues in configuration
-cub unit edit --space app-dev frontend
-
-# Re-validate
-cub function do --space app-dev frontend vet-schemas
-```
-
----
-
-## Best Practices
-
-1. **Use Spaces for Isolation:** Create separate spaces for each environment and application combination
-2. **Label Everything:** Use consistent labels (Environment, Application, Team) for bulk operations
-3. **Install Core Triggers:** Always install `vet-schemas` and `vet-placeholders` triggers
-4. **Use ChangeSets for Coordinated Changes:** Group related changes for atomic rollouts and rollbacks
-5. **Tag Before Risky Operations:** Create tags before major changes to enable easy rollback
-6. **Leverage Links:** Use links for dependency management and value propagation
-7. **Protect Production:** Add delete and destroy gates to production resources
-8. **Refresh Regularly:** Periodically refresh units to detect drift
-9. **Use Filters for Bulk Operations:** Create saved filters for frequently operated-on unit groups
-10. **Validate Before Apply:** Use dry-run and local validation before applying changes
 
 ---
 
 ## References
 
-- [ConfigHub Official Documentation](https://docs.confighub.com/)
-- [ConfigHub CLI Reference](https://docs.confighub.com/developer/cli/cub-overview/)
-- [Configuration as Data Concept](https://docs.confighub.com/background/config-as-data/)
-- [ConfigHub Architecture](https://docs.confighub.com/background/architecture/)
-- [Function Authoring Guide](https://github.com/confighub/sdk/blob/main/function/README.md)
-- [ConfigHub SDK](https://github.com/confighub/sdk)
+- [ConfigHub Documentation](https://docs.confighub.com)
+- [Configuration as Data Principles](https://docs.confighub.com/concepts/config-as-data)
+- [CLI Reference](https://docs.confighub.com/cli)

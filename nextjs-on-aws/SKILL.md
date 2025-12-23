@@ -1,3 +1,13 @@
+---
+name: nextjs-on-aws
+description: |
+  This document compares various AWS deployment options for Next.js applications, analyzing costs, benefits, limitations, and providing recommendations based on different use cases.
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # Next.js AWS Deployment Options Comparison
 
 ## Executive Summary

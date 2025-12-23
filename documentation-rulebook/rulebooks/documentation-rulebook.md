@@ -1,3 +1,0 @@
-# Deployment Guide
-
-Your deployment procedures and guidelines here...

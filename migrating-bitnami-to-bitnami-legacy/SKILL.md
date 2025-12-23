@@ -1,3 +1,15 @@
+---
+name: migrating-bitnami-to-bitnami-legacy
+description: |
+  This rule book helps you migrate Bitnami Helm charts and container images from the bitnami repository to the bitnamilegacy repository.
+
+  This migration is necessary due to Bitnami's transition, effective August 28th, 2025, where existing images will be moved to the legacy repo
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # Bitnami to Bitnami Legacy Migration Rule Book
 
 ## 1. Overview

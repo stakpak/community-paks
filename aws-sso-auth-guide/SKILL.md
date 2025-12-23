@@ -1,3 +1,12 @@
+---
+name: aws-sso-auth-guide
+description: AWS SSO discovery, configuration, and terminal usage
+license: MIT
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # AWS SSO Terminal Guide
 
 ## Discovery: Finding SSO Configuration
