@@ -4,7 +4,7 @@ description: How to do simple but secure deployments using virtual machines on d
 license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: "1.0.1"
   tags:
     - aws
     - deploy

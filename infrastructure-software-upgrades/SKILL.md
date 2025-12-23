@@ -4,7 +4,7 @@ description: Generic guidelines on how to perform infrastructure component upgra
 license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: "1.0.1"
   tags:
     - upgrades
     - maintenance
