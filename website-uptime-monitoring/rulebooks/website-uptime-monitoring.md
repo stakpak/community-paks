@@ -1,12 +1,5 @@
 # Website Uptime Monitoring and Availability
 
-**Description:** Deploy Uptime Kuma for website uptime monitoring and alerting. Covers Docker and Kubernetes deployments.  
-**Tags:** monitoring, uptime, alerting, availability, uptime-kuma, kubernetes, docker
-
-## Goals
-
-Deploy and configure Uptime Kuma for website uptime monitoring with automatic alerting.
-
 ## Quick Start
 
 ### Docker (Simple)
