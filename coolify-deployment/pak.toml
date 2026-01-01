@@ -1,0 +1,16 @@
+[pak]
+name = "coolify-deployment"
+version = "1.0.0"
+description = "Deploy Coolify self-hosted PaaS for application hosting. Covers VM provisioning, installation, GitHub integration, and application deployment with auto-SSL."
+authors = ["Stakpak <team@stakpak.dev>"]
+license = "MIT"
+repository = "https://github.com/stakpak/paks"
+path = "coolify-deployment"
+keywords = ["coolify", "paas", "self-hosted", "docker", "deployment", "heroku-alternative", "ssl", "traefik"]
+visibility = "public"
+
+[contents]
+[[contents.rulebooks]]
+path = "rulebooks/coolify-deployment.md"
+description = "Deploy Coolify self-hosted PaaS for application hosting. Covers VM provisioning, installation, GitHub integration, and application deployment with auto-SSL."
+tags = ["coolify", "paas", "self-hosted", "docker", "deployment", "heroku-alternative", "ssl", "traefik"]
