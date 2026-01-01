@@ -1,3 +1,22 @@
+---
+name: vllm-deployment
+description: |
+  Deploy vLLM for high-performance LLM inference. Covers Docker CPU/GPU deployments and cloud VM provisioning with OpenAI-compatible API endpoints.
+license: MIT
+tags:
+  - vllm
+  - llm
+  - inference
+  - gpu
+  - ai
+  - machine-learning
+  - docker
+  - openai-api
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # vLLM Model Serving and Inference
 
 ## Quick Start

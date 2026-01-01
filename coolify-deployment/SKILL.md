@@ -1,3 +1,22 @@
+---
+name: coolify-deployment
+description: |
+  Deploy Coolify self-hosted PaaS for application hosting. Covers VM provisioning, installation, GitHub integration, and application deployment with auto-SSL.
+license: MIT
+tags:
+  - coolify
+  - paas
+  - self-hosted
+  - docker
+  - deployment
+  - heroku-alternative
+  - ssl
+  - traefik
+metadata:
+  author: Stakpak <team@stakpak.dev>
+  version: "1.0.0"
+---
+
 # Coolify Self-Hosted PaaS Deployment
 
 ## Quick Start
