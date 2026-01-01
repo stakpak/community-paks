@@ -14,7 +14,7 @@ tags:
   - openai-api
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: "1.0.3"
 ---
 
 # vLLM Model Serving and Inference
