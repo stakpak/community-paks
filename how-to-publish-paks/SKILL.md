@@ -1,7 +1,7 @@
 ---
 name: how-to-publish-paks
 description: |
-  A practical guide for creating and publishing Agent Skills (paks) to the Paks registry. Covers SKILL.md format, frontmatter structure, validation, versioning, and publishing workflow.
+  A practical guide for creating and publishing high-quality Agent Skills (paks) to the Paks registry. Covers SKILL.md format, frontmatter structure, content writing best practices, validation, versioning, and publishing workflow.
 license: MIT
 tags:
   - paks
@@ -12,14 +12,14 @@ tags:
   - paks-cli
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.4"
+  version: "1.0.5"
 ---
 
 # How to Publish Paks (Agent Skills)
 
 ## Overview
 
-Paks are reusable instruction sets that enhance AI coding agents. This guide covers the complete workflow from creation to publishing on the Paks registry.
+Paks are reusable instruction sets that enhance AI coding agents. This guide covers the complete workflow from creation to publishing on the Paks registry, with emphasis on writing high-quality content that agents can effectively use.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Paks are reusable instruction sets that enhance AI coding agents. This guide cov
 - Stakpak API key for publishing
 - Git repository for your skill
 
-## Workflow
+## Workflow / Instructions
 
 ### Step 1: Create Skill Structure
 
@@ -84,23 +84,37 @@ Your skill instructions go here...
 | `metadata.version` | Yes | Semantic version matching git tag |
 | `metadata.author` | No | Author name and email |
 
+**Writing a Good Description:**
+
+The description helps agents know what this skill is about, its scope, and when to use it. Keep it short and outcome-oriented.
+
+- **Bad:** "This skill is about Kubernetes."
+- **Good:** "This skill helps you deploy and scale applications on Kubernetes with production-grade configuration."
+
+**Writing Good Tags:**
+
+Create at least three tags to help agents find this skill via keyword search. Use specific, relevant terms.
+
 ### Step 3: Write Skill Content
 
-After the frontmatter, write clear instructions:
+After the frontmatter, structure your content with clear goals and actionable workflows:
 
 ```markdown
 # Skill Title
 
-## Overview
-Brief description of what this skill accomplishes.
+## Goals
+Explain the outcome the user will achieve by following this skill.
+Write as clear, outcome-oriented sentences.
 
 ## Prerequisites
 Required tools, files, or context.
 
-## Instructions
+## Workflow / Instructions
 
 ### Step 1: First Action
-Imperative instructions with examples.
+**Action:** Imperative instruction (e.g., "Install the CLI tool")
+**Reasoning:** Why this step is required (optional but recommended)
+**Examples:** Code samples, commands, or configuration snippets
 
 ### Step 2: Next Action
 Continue with clear, atomic steps.
@@ -110,13 +124,38 @@ Common issues and solutions.
 
 ## References
 - [Official Documentation](https://example.com)
+- Related skills
 ```
 
-**Best Practices:**
+### Step 4: Apply Content Quality Guidelines
+
+**Structure & Style:**
+- Use clear structure and concise text
+- Use short, direct sentences
+- Keep steps atomic (one action per step)
+- Include necessary context but avoid unnecessary details
 - Keep under 5,000 words (~800 lines)
-- Use imperative language ("Analyze code for...") not second person
 - Reference external files for detailed content
+
+**Writing for Agents:**
+- Use imperative language ("Analyze code for...") not second person
+- Avoid hard-coded values - maximize reusability
+- Only include new information and insights that complement agent knowledge
+- Don't repeat knowledge the agent already has - this reduces quality
 - Include code examples and configuration snippets
+
+**What to Include:**
+- Good patterns discovered through experience
+- Information learned from web research
+- References to external files for detailed content
+
+**Optional Enhancements:**
+- Add prerequisites with conditions (e.g., "only run if there is Terraform code")
+- Reference established standards and guidelines:
+  - Principle of least privilege
+  - OWASP Guidelines (specify which ones)
+  - AWS Well-Architected Framework
+  - Internal company guidelines from other skills (with reference)
 
 ### Step 4: Validate the Skill
 
