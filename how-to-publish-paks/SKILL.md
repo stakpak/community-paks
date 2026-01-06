@@ -12,7 +12,7 @@ tags:
   - paks-cli
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.5"
+  version: "1.0.6"
 ---
 
 # How to Publish Paks (Agent Skills)
