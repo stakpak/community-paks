@@ -3,15 +3,9 @@ name: beads-issue-tracker
 description: |
   Guide for using Beads (bd), a dependency-aware issue tracker for AI agents. Issues chained together like beads.
 license: MIT
-tags:
-  - beads
-  - issue-tracker
-  - ai-agents
-  - task-management
-  - dependencies
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.10"
+  version: 1.0.11
 ---
 
 # Beads Issue Tracker (bd)
