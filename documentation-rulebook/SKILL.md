@@ -2,13 +2,9 @@
 name: documentation-rulebook
 description: Standard deployment procedures for production
 license: MIT
-tags:
-  - deployment
-  - production
-  - sop
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.2"
+  version: 1.0.3
 ---
 
 # Deployment Guide
