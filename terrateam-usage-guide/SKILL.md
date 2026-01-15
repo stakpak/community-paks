@@ -3,20 +3,9 @@ name: terrateam-usage-guide
 description: |
   A comprehensive guide for configuring and using Terrateam, an open-source GitOps CI/CD platform for Terraform and OpenTofu. Covers configuration file structure, access control, workflows, OIDC authentication, drift detection, and best practices for managing infrastructure through pull requests.
 license: MIT
-tags:
-  - terrateam
-  - terraform
-  - opentofu
-  - gitops
-  - infrastructure-as-code
-  - ci-cd
-  - github
-  - pull-requests
-  - oidc
-  - drift-detection
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.7"
+  version: 1.0.8
 ---
 
 # Terrateam Usage Guide
