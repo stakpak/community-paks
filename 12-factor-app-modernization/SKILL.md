@@ -3,17 +3,9 @@ name: 12-factor-app-modernization
 description: |
   Systematic process for analyzing and modernizing legacy applications to comply with the 12-Factor App methodology. Covers code analysis, configuration externalization, dependency management, and container/Kubernetes best practices.
 license: MIT
-tags:
-  - 12-factor
-  - modernization
-  - legacy-migration
-  - containerization
-  - kubernetes
-  - docker
-  - cloud-native
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: 1.0.14
 ---
 
 # 12-Factor App Modernization
