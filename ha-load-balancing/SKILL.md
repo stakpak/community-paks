@@ -3,18 +3,9 @@ name: ha-load-balancing
 description: |
   Configure high-availability load balancing with HAProxy and NGINX reverse proxies. Covers health checks, automatic failover, sticky sessions, and stats monitoring for containerized backends.
 license: MIT
-tags:
-  - haproxy
-  - nginx
-  - load-balancing
-  - high-availability
-  - docker
-  - failover
-  - sticky-sessions
-  - health-checks
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: 1.0.19
 ---
 
 # High-Availability Load Balancing with HAProxy and NGINX
