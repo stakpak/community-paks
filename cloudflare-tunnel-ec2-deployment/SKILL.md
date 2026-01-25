@@ -3,17 +3,9 @@ name: cloudflare-tunnel-ec2-deployment
 description: |
   Deploy containerized applications to AWS EC2 and expose them publicly via Cloudflare Tunnel with automatic HTTPS. Eliminates need for load balancers, SSL certificates, or public inbound ports.
 license: MIT
-tags:
-  - aws
-  - ec2
-  - cloudflare
-  - tunnel
-  - docker
-  - deployment
-  - https
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: 1.0.17
 ---
 
 # Deploying Applications on EC2 with Cloudflare Tunnel
