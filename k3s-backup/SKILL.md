@@ -3,17 +3,9 @@ name: k3s-backup
 description: |
   Backup and recovery solution for K3s clusters. Includes scheduled, pre-shutdown, and manual backup strategies with recovery procedures.
 license: MIT
-tags:
-  - k3s
-  - kubernetes
-  - backup
-  - recovery
-  - disaster-recovery
-  - sqlite
-  - cluster
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: 1.0.20
 ---
 
 # K3s Backup & Recovery
