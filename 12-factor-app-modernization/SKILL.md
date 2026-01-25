@@ -5,7 +5,7 @@ description: |
 license: MIT
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: 1.0.14
+  version: 1.0.15
 ---
 
 # 12-Factor App Modernization
