@@ -1,5 +1,5 @@
 ---
-name: Twelve-factor-app-modernization
+name: twelve-factor-app-modernization
 description: |
   Systematic process for analyzing and modernizing legacy applications to comply with the 12-Factor App methodology. Covers code analysis, configuration externalization, dependency management, and container/Kubernetes best practices.
 license: MIT
