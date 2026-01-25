@@ -3,17 +3,9 @@ name: cloudflare-workers
 description: |
   Deploy serverless applications on Cloudflare Workers. Covers project setup, JavaScript handler patterns, routing, deployment with Wrangler, and API token configuration. Suitable for APIs, proxies, edge computing, and request transformation.
 license: MIT
-tags:
-  - cloudflare
-  - workers
-  - serverless
-  - api
-  - wrangler
-  - edge-computing
-  - javascript
 metadata:
   author: Stakpak <team@stakpak.dev>
-  version: "1.0.0"
+  version: 1.0.18
 ---
 
 # Deploying Cloudflare Workers
